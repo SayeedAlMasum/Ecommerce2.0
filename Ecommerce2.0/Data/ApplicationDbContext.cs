@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Ecommerce2._0.Data
+namespace Ecommerce2.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

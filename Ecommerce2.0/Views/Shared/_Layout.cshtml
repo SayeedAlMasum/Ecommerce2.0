@@ -26,6 +26,7 @@
 	<link href="~/Frontend/css/style.css" rel="stylesheet">
 
 	<!-- SPECIFIC CSS -->
+	<link href="~/Frontend/css/account.css" rel="stylesheet">
 	<link href="~/Frontend/css/home_1.css" rel="stylesheet">
 
 	<!-- YOUR CUSTOM CSS -->
@@ -152,8 +153,10 @@
 							<!--/main-menu -->
 						</nav>
 						<div class="col-xl-3 col-lg-2 d-lg-flex align-items-center justify-content-end text-end">
-						<a asp-area="Identity" asp-page="/Account/Login" class="text-white">Sign in</a>
+							
+							<a class="phone_top" href="tel://9438843343"><strong><span>Need Help?</span>+94 423-23-221</strong></a>
 						</div>
+					
 					</div>
 					<!-- /row -->
 				</div>
@@ -284,7 +287,9 @@
 									<div class="dropdown dropdown-access">
 										<a href="account.html" class="access_link"><span>Account</span></a>
 										<div class="dropdown-menu">
-											<a href="account.html" class="btn_1">Sign In or Sign Up</a>
+											@* <a href="account.html" class="btn_1">Sign In or Sign Up</a> *@
+											<a asp-area="Identity" asp-page="/Account/Login" class="btn_1">Sign in</a>
+											<a asp-area="Identity" asp-page="/Account/Register" class="btn_1 mt-1">Sign up</a>
 											<ul>
 												<li>
 													<a href="track-order.html"><i class="ti-truck"></i>Track your Order</a>
@@ -331,9 +336,7 @@
 		</header>
 		<!-- /header -->
 
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        @RenderBody()
 
 		<footer class="revealed">
 			<div class="container">
@@ -443,6 +446,7 @@
 
 	<!-- SPECIFIC SCRIPTS -->
 	<script src="~/Frontend/js/carousel-home.min.js"></script>
+	@RenderSection("Scripts", required: false)
 
 </body>
 </html>
